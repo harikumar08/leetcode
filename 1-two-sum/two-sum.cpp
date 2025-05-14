@@ -5,7 +5,7 @@ public:
         for(int i=0;i<nums.size();i++){
             int x=target-nums[i];
             if(m.find(x)!=m.end()){
-                return {m[x],i};
+                return {i,m[x]};
             }
             else{
                 m[nums[i]]=i;
