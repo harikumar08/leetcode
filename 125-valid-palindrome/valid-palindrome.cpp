@@ -3,7 +3,7 @@ public:
     bool isPalindrome(string s) {
         string ans = "";
         for(char ch : s) {
-            if(isalnum(ch)) ans += tolower(ch);
+            if(isalnum(ch)) ans.push_back(tolower(ch));
         }
         int low = 0, high = ans.size() - 1;
         while(low <= high) {
