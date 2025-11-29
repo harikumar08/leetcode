@@ -1,14 +1,17 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        string ans = "";
-        for(char ch : s) {
-            if(isalnum(ch)) ans.push_back(tolower(ch));
+        string res="";
+        for(auto ch:s) {
+            if(isalnum(ch)) res.push_back(tolower(ch));
         }
-        int low = 0, high = ans.size() - 1;
-        while(low <= high) {
-            if(ans[low] != ans[high]) return false;
-            low++,high--;
+
+        int i=0;
+        int j=res.size()-1;
+        while(i<=j) {
+            if(res[i] != res[j]) return false;
+            i++;
+            j--;
         }
         return true;
     }
